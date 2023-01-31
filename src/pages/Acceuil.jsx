@@ -1,12 +1,13 @@
-
-import { NavBar } from "../components/NavBar";
+import { EnchereItem } from "../components/EnchereItem";
 
 export default function Acceuil(){
     return(
         <div>
-            <NavBar/>
             <div class="container">
-                
+                <h1>Liste des encheres</h1>
+                <EnchereItem/>
+                <EnchereItem/>
+                <EnchereItem/>
             </div>
         </div>
     );

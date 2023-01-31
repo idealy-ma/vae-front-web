@@ -1,11 +1,6 @@
-import { NavBar } from "../components/NavBar";
-import { SideBar } from "../components/SideBar";
-
 function NoPage(){
     return (
         <div>
-            {/* <SideBar/> */}
-            <NavBar/>
             <div class="container-fluid">
                 <div class="text-center mt-5">
                     <div class="error mx-auto" data-text="404">
