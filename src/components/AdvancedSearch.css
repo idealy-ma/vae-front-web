@@ -1,0 +1,40 @@
+.flex{
+    display: flex;
+}
+
+.search-box{
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.form-input label{
+    width: 100%;
+}
+
+.form-input input{
+    width: 98%;
+    padding: 5px;
+    border: none;
+    border-bottom: solid 1px rgb(172, 172, 172);
+}
+
+.form-input select{
+    width: 98%;
+    padding: 5px;
+    border: none;
+    /* border-radius: 5px; */
+    border-bottom: solid 1px rgb(172, 172, 172);
+    background:none;
+}
+
+.hover-grey{
+    border: none;
+    border-radius: 5px;
+    transition: 400ms;
+    padding: 10px;
+}
+
+.hover-grey:hover{
+    color: white;
+    background-color: rgb(165, 165, 165);
+}
