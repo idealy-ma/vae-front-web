@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import "./EnchereItem.css";
 
 export function EnchereItem(){
     return (
         <div>
             <div>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
-                //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+                    //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
             </div>
             <div>
                 <h3>Rolex</h3>
