@@ -1,0 +1,54 @@
+.card-animate{
+    display: inline-block;
+    margin-right: 4%;
+    width: 200px;
+    height: 220px;
+    border-radius: 6px;
+    background-color: #9c9c9c;
+    transition: 300ms;
+    position: relative;
+    top:0px;
+    animation: transp 3s infinite alternate;
+    padding: 3px;
+    box-shadow: 1px 1px 5px #9c9c9c;
+}
+
+.card-animate:hover{
+    top:-10px;
+}
+
+.image{
+    width: 100%;
+    height: 60%;
+    background-color: #9c9c9c;
+    animation: transp 2s infinite alternate;
+    border-radius: 6px;
+}
+.information{
+    width: 100%;
+    height: 20%;
+    background-color: #9c9c9c;
+    animation: transp 1s infinite alternate;
+    border-radius: 6px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+.bouton{
+    width: 30%;
+    height: 15%;
+    background-color: #9c9c9c;
+    animation: transp 1s infinite alternate;
+    border-radius: 6px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@keyframes transp {
+    from{
+        background-color: #9c9c9c;
+    } 
+    to{
+        background-color: #fff;
+    }
+}

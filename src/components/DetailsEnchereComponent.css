@@ -1,0 +1,90 @@
+.card-details{
+    box-shadow: 1px 1px 5px rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.i-block{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.padd img{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    transition: 400ms;
+}
+
+.details{
+    padding : 8px;
+    border-right: 0.1em #b6b5b5 dotted;
+    border-left: 0.1em #b6b5b5 dotted;
+    width: 45%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.padd{
+    font-family: "Sofia", sans-serif;
+    padding: 0% 20%;
+    position: relative;
+    top: 0px;
+    transition: 400ms;
+    text-align: center;
+}
+
+.padd img:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.money{
+    width: 45%;
+    padding : 8px;
+    text-align: center;
+}
+
+hr{
+    background-color: rgb(39, 39, 153);
+    color:rgb(39, 39, 153);
+    border: none;
+    height: 2px;
+}
+
+.money .text{
+    border: none;
+    padding : 6px;
+    width: 100%;
+    border-radius: 6px;
+    border: 0.1em solid #b6b5b5;
+    transition: 400ms;
+}
+
+.money .text:focus{
+    border-bottom: 0.5em solid #b6b5b5;
+}
+
+.err{
+    color: rgb(158, 16, 16);
+}
+
+.h-full{
+    height: 100%;
+}
+
+.button{
+    margin-top: 4px;
+    border: none;
+    padding: 6px;
+    width: 100%;
+}
+
+.desc{
+    width: 100%;
+    border-bottom: #b6b5b5 dotted 0.1em;
+    font-weight: bold;
+    padding-bottom: 2%;
+    font-size: large;
+    margin-bottom: 10px;
+}

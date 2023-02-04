@@ -1,5 +1,29 @@
 .nav-bar{
     width: 100%;
-    display: flex;
     box-shadow: 0px 2px 5px rgb(155, 155, 155);
+    position: fixed;
+    background: hsl(0, 0%, 100%);
+    top : 0px;
+    justify-content: space-around;
+    align-items: center;
+    z-index:400;
+}
+
+.flex{
+    display: flex;
+}
+
+nav{
+    display: flex;
+}
+
+nav div{
+    padding: 5px;
+    margin: auto 10px;
+}
+
+.title{
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px #ababab;
 }

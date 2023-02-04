@@ -1,10 +1,9 @@
 import "./AdvancedSearch.css";
-import "./EnchereItem.css";
 
 export function AdvancedSearch(){
     return (
         <div class="search-box shadow">
-            <div className="flex form-input">
+            <div className="form-input">
                 <div >
                     <label >Mot cle :</label>
                     <input type="text" placeholder="mot-cle"/>

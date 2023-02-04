@@ -3,18 +3,17 @@ import "./EnchereItem.css";
 
 export function EnchereItem( props ){
     return (
-        <div class="card-round shadow" >
-            <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
-                    //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+        <div class="i-block card-round shadow" >
+            <div className="img">
+                <img src={props.enchere.lesSary[0]} className="img" alt="Red dot" />
             </div>
-            <div>
+            <div className="info">
                 <h3>{props.enchere.nomProduit}</h3>
-                <p>{props.enchere.nomCategorie}</p>
-                <p>{props.enchere.prixMin}</p>
+                <p>{props.enchere.categorie.nomCategorie}</p>
+                <p>{props.enchere.prixMin} Ar</p>
             </div>
             <div>
-                <Link to="/" class="btn btn-success">Participer</Link>
+                <Link to={"/DetailsEnchere/"+props.enchere.idEnchere} class="button">Participer</Link>
             </div>
         </div>
     )

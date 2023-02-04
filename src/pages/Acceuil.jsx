@@ -1,45 +1,79 @@
 import { EnchereItem } from "../components/EnchereItem";
 import { AdvancedSearch } from "../components/AdvancedSearch";
+import { BoxLoading } from "../components/BoxLoading";
+import { NavBar } from "../components/NavBar";
 import { useState, useEffect } from "react";
+
+import "./Acceuil.css";
 
 export default function Acceuil(){
     const [encheres,setEncheres] = useState();
+    const [load,setLoad] = useState(false);
 
-    function getEncheres() {
-        const enchereList = [
-            {
-                "idEnchere": 2,
-                "nomProduit": "Bague",
-                "dateDebut": "2023-01-20T08:33:22.320+00:00",
-                "dateFin": "2023-01-20T09:00:00.000+00:00",
-                "prixMin": 5000.0,
-                "description": "Ceci est un collier",
-                "nomCategorie": "Bijoux",
-                "idCategorie": 1,
-                "nom": "Anjara",
-                "prenom": "Joston",
-                "idClient": 1,
-            }
-        ]
-
-        return enchereList;
-        // fetch("");
+    const getEncheres = (loaded) => {
+        if(loaded==false){
+            fetch("https://vae-client-backend-production.up.railway.app/encheres")
+            .then((res)=>{
+                return res.json();
+            }).then((res)=>{
+                if(res.error !== undefined){
+                    alert("Error");
+                } else {
+                    setEncheres(res.data);
+                    setLoad(true);
+                }
+            },(err)=>{
+                console.log("Server Error")
+            })
+        }
     }
 
     useEffect(()=>{
-        setEncheres(getEncheres());
+        getEncheres(load);
     },[])
 
-
-    return(
-        <div>
-            <div class="container">
-                <h1>Liste des encheres</h1>
-                <AdvancedSearch />
-                {encheres?.map((value)=> <EnchereItem enchere={value} /> )}
-                {/* <EnchereItem/>
-                <EnchereItem/> */}
-            </div>
-        </div>
-    );
+    if(!load){
+        return (
+            <>
+                <NavBar page={"Acceuil"}/>
+                <div className="body">
+                    <div class="container">
+                        <div className="i-block w-25">
+                            <AdvancedSearch />
+                        </div>
+                        <div class="i-block w-75">
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                            <BoxLoading />
+                        </div>
+                    </div>
+                </div>
+            </>
+        )
+    } else {
+        return(
+            <>
+                <NavBar page={"Acceuil"}/>
+                <div className="body">
+                    <div class="container">
+                        <div className="i-block w-25">
+                            <AdvancedSearch />
+                        </div>
+                        <div class="i-block w-75">
+                            {encheres?.map((value)=> <EnchereItem enchere={value} /> )}
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    }
 }
